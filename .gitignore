@@ -1,0 +1,7 @@
+venv/
+day1/venv/
+day2/venv/
+day3/venv/
+__pycache__/
+*.pyc
+.env
