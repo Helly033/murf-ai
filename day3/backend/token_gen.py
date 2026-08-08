@@ -1,0 +1,1 @@
+from livekit.api import AccessToken, VideoGrants; print(AccessToken('APIRZpxztKts5S9', 'PeOikfvlUucvudaWfTDePRTClt8CxzKhiu6XDWJg8zcD').with_identity('Student').with_name('Student').with_grants(VideoGrants(room_join=True, room='aria-room', can_publish=True, can_subscribe=True)).to_jwt())
