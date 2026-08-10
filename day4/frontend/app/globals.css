@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fc;
+  color: #111827;
+}
+
+button {
+  font-family: inherit;
+}
+
+.landing,
+.conversation {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.landing {
+  background:
+    radial-gradient(circle at 20% 20%, #e9efff 0, transparent 35%),
+    radial-gradient(circle at 80% 80%, #f1e9ff 0, transparent 35%),
+    #f8f9fc;
+}
+
+.card {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  padding: 60px 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #111827;
+  color: white;
+  font-size: 32px;
+}
+
+.logo.small {
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  border-radius: 16px;
+  font-size: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6b7280;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 76px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.subtitle {
+  max-width: 460px;
+  margin: 24px auto 34px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.talk-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 17px 32px;
+  background: #111827;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.talk-button:hover {
+  transform: translateY(-2px);
+}
+
+.talk-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.features span {
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.conversation {
+  background:
+    radial-gradient(circle at 50% 20%, #e8edff 0, transparent 35%),
+    #f8f9fc;
+}
+
+.conversation-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 620px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 30px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.top h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.orb-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef0f5;
+  box-shadow: 0 0 0 20px rgba(238, 240, 245, 0.5);
+  transition: all 0.4s;
+}
+
+.orb.active {
+  background: #111827;
+  box-shadow:
+    0 0 0 20px rgba(17, 24, 39, 0.08),
+    0 0 0 40px rgba(17, 24, 39, 0.04);
+  animation: pulse 2s infinite;
+}
+
+.orb span {
+  font-size: 55px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.status-dot.connected {
+  background: #22c55e;
+}
+
+.hint {
+  margin: 12px 0 25px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.end-button {
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #111827;
+  padding: 13px 25px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.end-button:hover {
+  background: #f3f4f6;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 45px 24px;
+  }
+
+  .conversation-card {
+    min-height: 560px;
+    padding: 24px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+}
